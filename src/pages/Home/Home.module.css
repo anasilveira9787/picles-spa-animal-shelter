@@ -6,3 +6,9 @@
   max-width: 340px;
   gap: var(--spacing-md);
 }
+
+.container img {
+  margin-bottom: 22px;
+  width: 100%
+}
+
