@@ -22,9 +22,9 @@ export const filterColumns : IFilterColumns[] = [
     title: 'Porte',
     options: [
       { value: '', text: 'Todos' },
-      { value: 'small', text: 'Pequeno' },
-      { value: 'medium', text: 'Médio' },
-      { value: 'large', text: 'Grande' },
+      { value: 'Small', text: 'Pequeno' },
+      { value: 'Medium', text: 'Médio' },
+      { value: 'Large', text: 'Grande' },
     ],
   },
   {
