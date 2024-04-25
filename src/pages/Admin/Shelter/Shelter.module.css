@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  flex-basis: 320px;
   gap: var(--spacing-sm);
 }
 
@@ -11,4 +12,5 @@
 .formError {
   color: var(--color-danger);
   margin: var(--spacing-xs) 0 0;
+  font-size: small;
 }

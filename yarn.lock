@@ -1394,7 +1394,7 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-dom@^18.0.0, react-dom@^18.2.0, react-dom@>=16.8:
+react-dom@^18.0.0, react-dom@^18.2.0, "react-dom@>=16.4 || 17 || 18 || 20", react-dom@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -1432,7 +1432,7 @@ react-router@6.22.3:
   dependencies:
     "@remix-run/router" "1.15.3"
 
-"react@^16.8.0 || ^17 || ^18", react@^18.0.0, react@^18.2.0, react@>=16.8, react@>=16.8.0:
+"react@^16.8.0 || ^17 || ^18", react@^18.0.0, react@^18.2.0, "react@>=16.4 || 17 || 18 || 20", react@>=16.8, react@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -1629,6 +1629,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-mask-input@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.npmjs.org/use-mask-input/-/use-mask-input-3.3.7.tgz"
+  integrity sha512-cj3sSnRzF0r1lNBk9NzAgbvQTgCOB7n5wL4tJrXQB2YR9hS4adWCaqEVqJvWHcRqTFb8hekmITQYPOZrDSN/Yg==
 
 "vite@^4.2.0 || ^5.0.0", vite@^5.2.0:
   version "5.2.8"
