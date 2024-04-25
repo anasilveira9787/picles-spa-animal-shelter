@@ -6,6 +6,9 @@ import styles from './Shelter.module.css';
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useHookFormMask } from "use-mask-input";
+import { updateShelter } from "../../../services/shelter/updateShelter";
+import { Toaster, toast } from "sonner";
+import { useQueryClient } from "@tanstack/react-query";
 
 
 const shelterSchema = z.object({
@@ -27,7 +30,7 @@ const shelterSchema = z.object({
     .refine((value) => {
       const digits = value.replace(/\D/g, '').length
       return digits >= 10 && digits <= 11
-    },  'Número de Whatsapp incorreto'),
+    }, 'Número de Whatsapp incorreto'),
 });
 
 type shelterSchema = z.infer<typeof shelterSchema>;
@@ -38,9 +41,32 @@ export function Shelter() {
   })
 
   const registerWithMask = useHookFormMask(register)
+  const queryClient = useQueryClient()
 
-  function submit({ name }: shelterSchema) {
-    console.log(name)
+  async function submit({ name, email, phone, whatsApp }: shelterSchema) {
+    const toastId = toast.loading('Salvando dados do abrigo...')
+    try {     
+      
+      await updateShelter({
+        name,
+        email,
+        phone: phone.replace(/\D/g, ''),
+        whatsApp: whatsApp.replace(/\D/g, ''),
+      })
+      queryClient.invalidateQueries({queryKey: ['get-shelter']})
+      toast.success('Dados do abrigo salvos com sucesso', {
+        id: toastId,
+        closeButton: true,
+      })
+    } catch (error) {
+      toast.error('Não foi possível salvar os dados', {
+        id: toastId,
+        closeButton: true,
+      })
+    }
+
+
+    console.log('Dados do abrigo', { name, email, phone, whatsApp })
   }
 
 
