@@ -21,4 +21,4 @@ export type GetPetsResponse = {
   currentPage:number
 };
 
-
+export type AddPetRequest = Omit<IPet, 'id' | 'photo'>
